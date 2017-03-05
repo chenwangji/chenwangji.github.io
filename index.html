@@ -104,7 +104,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":true,"scrollpercent":true},
     fancybox: true,
     motion: true,
     duoshuo: {
@@ -202,6 +202,26 @@
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
@@ -221,11 +241,69 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            站点地图
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
 
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
       
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
   
 </nav>
 
@@ -250,422 +328,12 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/05/note1_animate_plogins_zepto_canvas/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="chenwangji">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="chenwangji's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/05/note1_animate_plogins_zepto_canvas/" itemprop="url">
-                  未命名
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-05T18:08:45+08:00">
-                2017-03-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h6 id="css-animate-css"><a href="#css-animate-css" class="headerlink" title="css animate.css"></a>css animate.css</h6><ol>
-<li>一个常用的动效库</li>
-</ol>
-<h6 id="css-zeptofullpage-css"><a href="#css-zeptofullpage-css" class="headerlink" title="css zeptofullpage.css"></a>css zeptofullpage.css</h6><p>动效库</p>
-<h6 id="zepto-js"><a href="#zepto-js" class="headerlink" title="zepto.js"></a>zepto.js</h6><p>一个和jQuery.js的移动端，新增一些API， 和 touch模块。<br>  <a href="http://github.e-sites.nl/zeptobuilder/" target="_blank" rel="external">在线选取zepto模块的一个网站</a> 。  可能生成的文件有问题。</p>
-<ol>
-<li>zepto.js和jQery的区别：</li>
-</ol>
-<ul>
-<li>zeptojs的体积比Jquery更小。</li>
-<li>他们的API基本上一样。</li>
-<li>zeptojs里面有一个叫做touch模块。</li>
-</ul>
-<ol>
-<li>zepto.js在移动端的点透问题：</li>
-</ol>
-<p>在移动端里，click和tap有区别。</p>
-<p>触发的时间的区别:</p>
-<blockquote>
-<p>click需要350ms,tap需要200多ms</p>
-</blockquote>
-<p>注意： 使用zepto会引发点透的问题！</p>
-<p>解决zepto点透的问题？</p>
-<blockquote>
-<p>需要使用fastclick这个插件来解决点透的问题。</p>
-</blockquote>
-<ol>
-<li>深拷贝和浅拷贝的区别？</li>
-</ol>
-<p>浅拷贝的父对象和子对象指向的地址不一样，但是属性中的引用类型还是会指向同样的内存地址，<br>深拷贝的两个对象所有属性都没有了关系，实现了真正意义上的深拷贝</p>
-<ol>
-<li>深拷贝的方法</li>
-</ol>
-<p><a href="http://jerryzou.com/posts/dive-into-deep-clone-in-javascript/" target="_blank" rel="external">这个博客罗列了很多方法</a></p>
-<ul>
-<li>利用JSON对象的方法，<br>将要拷贝的对象JSON.stringgify()转化为字符串，再通过JSON.parse()解析赋值，这样新对象和就对象就不会指向同一个地址</li>
-</ul>
-<p>缺点—不能实现对函数的拷贝</p>
-<pre><code>var obj1 = {
-    name: &quot;zhangsan&quot;,
-    sayHello: function() {
-        console.log(this.name);
-    }
-}    
-var copyObj1 = JSON.stringify(obj1);
-console.log(copyObj1);
-var obj2 = JSON.parse(copyObj1);
-
-console.log(obj2);
-console.log(obj2 == obj1); //false
-</code></pre><ul>
-<li>jq/zepto 的$.extend()方法</li>
-</ul>
-<pre><code>var orinObj = {
-    a:1,
-    arr:[1,2],
-    fn:function() {}
-}
-
-//第一个参数设为false或者默认,则为浅拷贝
-var newObj = $.extend({}, orinObj);
-console.log(newObj === orinObj); //false
-console.log(newObj); //Object {a: 1, arr: Array[2]}
-console.log(orinObj.fn === newObj.fn); //true
-
-//深拷贝
-var newObj2 = $.extend(true, {}, orinObj); 
-console.log(newObj2); //Object {a: 1, arr: Array[2]}
-console.log(newObj2 === orinObj); //false
-</code></pre><h6 id="animation"><a href="#animation" class="headerlink" title="animation"></a>animation</h6><ol>
-<li><p>animation: 写在动画的元素里，连起来写的属性值</p>
-<ul>
-<li>关键帧动画的名字  </li>
-<li>过渡的时间 </li>
-<li>延迟的时间 </li>
-<li>动效的速度(linear  / ease  /ease-in / ease-in-out / 贝塞尔曲线)</li>
-<li>循环的次数(数字 / infinite(一直循环)) </li>
-<li>设置动画结束后的样式(<code>backwards</code>(让元素保持原有的样式) / <code>both</code>(保留最终的样式) / <code>forwards</code>(让元素拥有最后的样式) ) </li>
-<li>是否反向(<code>alternate</code>)如果设置了方向，也会计入循环次数</li>
-</ul>
-</li>
-</ol>
-<p>注意与tansition 的区别</p>
-<ol>
-<li>定义关键帧动画</li>
-</ol>
-<p>@keyframes animateName {}</p>
-<pre><code>.box {
-    width: 100px;
-    height: 100px;
-    animation: myAnimate 2s both alternate;
-    background: #008000;
-    position: relative;
-}
-
-@keyframes myAnimate {
-    0% {
-        width: 100px;
-        height: 100px;
-        left: 20px;
-    }
-
-    40% {
-        width: 300px;    
-        height: 100px;
-        background: #f00;
-        left: 40px;
-    }
-
-    60% {
-        width: 600px;
-        height: 200px;
-        left: 200px;
-    }
-
-    80% {
-        background: yellow;    
-    }
-
-    100% {
-        width: 900px;
-        left: 50px;
-    }
-}
-</code></pre><h6 id="canvas"><a href="#canvas" class="headerlink" title="canvas"></a>canvas</h6><p>为我们提供了一个API : 渲染上下文</p>
-<pre><code>var ctx = can.getContext(&quot;2d&quot;/ &quot;3d&quot;);
-</code></pre><p>拓展：</p>
-<p>==webgl 用来制作3D的页面==</p>
-<p>==three.js==</p>
-<p>canvas有一个默认样式，宽度为300px.高度为150px</p>
-<p>canvas默认颜色是黑色</p>
-<ol>
-<li>设置宽高的方式</li>
-</ol>
-<p>canvas的宽高不能通过css来给它设置！</p>
-<ul>
-<li>html标签属性</li>
-</ul>
-<pre><code>&lt;canvas width=&quot;800&quot; height=&quot;600&quot;&gt;&lt;/canvas&gt;
-</code></pre><ul>
-<li>js</li>
-</ul>
-<pre><code>var can = document.queryselector(&quot;canvas&quot;);
-can.width = &apos;600&apos;;
-can.height = &apos;400&apos;;
-</code></pre><ol>
-<li>如何在canvas 里绘制图片</li>
-</ol>
-<p>canvas的坐标为(0,0)在左上角！</p>
-<ul>
-<li>如何绘制矩形？</li>
-</ul>
-<pre><code>var can = document.querySelector(&quot;#can&quot;);
-can.width = 600;
-can.height = 400;
-var ctx = can.getContext(&quot;2d&quot;);
-
-//绘制矩形
-//ctx.rect(x, y, w, h);
-ctx.rect(30, 30, 50, 50);
-//填充
-//ctx.fill();
-//绘制边框
-ctx.stroke();
-//改变边框颜色
-ctx.strokeStyle = &quot;royalblue&quot;;
-ctx.strokeRect(100, 30, 50, 50);
-
-//改变填充颜色
-ctx.fillStyle = &quot;deepskyblue&quot;;
-ctx.fillRect(170, 30, 50, 50);
-</code></pre><ul>
-<li><p>如何画线？</p>
-<pre><code>设置开始的坐标点
-moveTo(x,y)
-
-设置点的坐标
-lineTo(x,y)
-</code></pre></li>
-</ul>
-<pre><code>开始路径
-beginPath()
-
-闭合路径
-closePath()    
-</code></pre><ul>
-<li>如何绘制三角形？</li>
-</ul>
-<p>在canvas API中没有提供绘制三角形的直接方法，但是可以通过绘制点再 连接即可间接绘制出来</p>
-<pre><code>//画三角形
-//ctx.beginPath();
-ctx.moveTo(240, 30);
-ctx.lineTo(290, 55);
-ctx.lineTo(240, 80);
-ctx.fill();
-</code></pre><ul>
-<li>绘制圆弧</li>
-</ul>
-<p>arc(x,y,r,起始弧度，结束的弧度,旋转的方向(true 逆时针   /  false  顺时针))</p>
-<p>x,y —-&gt; 圆心坐标</p>
-<p>r  —&gt; 半径</p>
-<p>弧度 = (Math.PI/180)*度数</p>
-<pre><code>//画圆 逆时针true 顺时针false
-ctx.beginPath();
-ctx.arc(325, 55, 25, Math.PI * 2, 0, true);
-ctx.lineTo(325, 55);
-ctx.stroke();
-ctx.closePath();
-ctx.fill();
-</code></pre><ul>
-<li>绘制扇形</li>
-</ul>
-<pre><code>//画扇形
-ctx.beginPath();  // 起始位置要改成他的圆心位置
-ctx.arc(400,55,25,0,Math.PI/4,false);
-ctx.lineTo(400, 55);
-ctx.closePath();
-ctx.stroke();    
-</code></pre><ul>
-<li>绘制图片</li>
-</ul>
-<p>画图片：</p>
-<pre><code>drawImage(image,x,y,w,h)
-
-
-//绘制图片
-var oImage = new Image();
-oImage.src = &quot;zepto.fullpage-master/demo/img/landscape.png&quot;;
-oImage.onload = function() {
-    ctx.drawImage(oImage,30, 130, 50, 50);                
-};
-</code></pre><ul>
-<li><p>绘制文字</p>
-<pre><code>fillText(你要画的文字,x,y)
-
-strokeText(你要画的文字，x,y)
-</code></pre></li>
-</ul>
-<pre><code>//实心文字
-ctx.font = &quot;30px Arial&quot;;
-ctx.fillText(&quot;hello world&quot;, 100, 150);
-//空心文字        
-ctx.strokeText(&quot;JavaScript&quot;, 250, 150);
-</code></pre><ul>
-<li><p>画折线图 / 柱状图 / 饼图…</p>
-<pre><code>Echarts  /  hightcharts    
-</code></pre></li>
-</ul>
-<ul>
-<li>canvas里面如果想做动画，实际上就是把之前的清掉，重新画。</li>
-</ul>
-<pre><code>clearRect(x,y,w,h);
-</code></pre><p>canvas标签中间是没有文字的，如果能显示文字，说明该浏览器不支持canvas,可以用这个方法鉴别用户浏览器是否支持canvas </p>
-<pre><code>&lt;canvas&gt;您的浏览器不支持canvas&lt;/canvas&gt;
-</code></pre><h6 id="移动端布局"><a href="#移动端布局" class="headerlink" title="移动端布局"></a>移动端布局</h6><ol>
-<li>一些常用单位</li>
-</ol>
-<ul>
-<li>em 相对于父级元素的字体大小</li>
-<li>rem 相对于根元素的字体大小</li>
-<li>vw 视口宽度百分比</li>
-<li>vh 视口高度百分比</li>
-</ul>
-<p>如何获取视口宽高？</p>
-<pre><code>window.innerWidth; //宽
-widdow.innerHeight; //高
-</code></pre><ol>
-<li>meta元标签的一些说明</li>
-</ol>
-<ul>
-<li>iphone上输入一行数字或者邮箱后文字的样式改变且无法通过css修改的解决办法</li>
-</ul>
-<pre><code>&lt;meta content=&quot;telephone=no,email=no&quot; name=&quot;format-detection&quot; /&gt; 
-</code></pre><ul>
-<li>网站关键字</li>
-</ul>
-<pre><code>&lt;meta name=&quot;keywords&quot; content=&quot;前端，呵呵，古诗&quot; /&gt;
-</code></pre><ul>
-<li>网站描述</li>
-</ul>
-<pre><code>&lt;meta name=&quot;description&quot; content=&quot;发打发打发打发地方地方地方&quot; /&gt;
-</code></pre><ul>
-<li>默认窗口缩放比例</li>
-</ul>
-<pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-</code></pre><ul>
-<li>ie自动调用edge浏览器</li>
-</ul>
-<pre><code>&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
-</code></pre><ul>
-<li>编码格式</li>
-</ul>
-<pre><code>&lt;meta charset=&quot;UTF-8&quot;&gt;
-</code></pre>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/05/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="chenwangji">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -736,18 +404,162 @@ widdow.innerHeight; //高
 
       
         
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+          <p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/05/hello-world/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/05/note1_animate_plogins_zepto_canvas/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="chenwangji">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="chenwangji's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/03/05/note1_animate_plogins_zepto_canvas/" itemprop="url">
+                  learning note_1
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-05T00:00:00+08:00">
+                2017-03-05
+              </time>
+            
+
+            
+
+            
+          </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/note/" itemprop="url" rel="index">
+                    <span itemprop="name">note</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="css-animate-css"><a href="#css-animate-css" class="headerlink" title="css animate.css"></a>css animate.css</h2><ol>
+<li>一个常用的动效库</li>
+</ol>
+<h2 id="css-zeptofullpage-css"><a href="#css-zeptofullpage-css" class="headerlink" title="css zeptofullpage.css"></a>css zeptofullpage.css</h2><p>动效库</p>
+<h2 id="zepto-js"><a href="#zepto-js" class="headerlink" title="zepto.js"></a>zepto.js</h2><p>一个和jQuery.js的移动端，新增一些API， 和 touch模块。<br>  <a href="http://github.e-sites.nl/zeptobuilder/">在线选取zepto模块的一个网站</a> 。  可能生成的文件有问题。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/05/note1_animate_plogins_zepto_canvas/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -810,7 +622,7 @@ widdow.innerHeight; //高
       <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
+               src="/images/avatar.jpg"
                alt="chenwangji" />
           <p class="site-author-name" itemprop="name">chenwangji</p>
            
@@ -829,7 +641,25 @@ widdow.innerHeight; //高
           
 
           
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
 
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
           
 
         </nav>
@@ -853,6 +683,13 @@ widdow.innerHeight; //高
 
       
 
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
       
 
     </div>
@@ -894,11 +731,6 @@ widdow.innerHeight; //高
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
     
     
   </div>
@@ -1004,6 +836,132 @@ widdow.innerHeight; //高
 
   
   
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
 
   
 
@@ -1012,6 +970,19 @@ widdow.innerHeight; //高
   
 
   
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.0"></script>
+
 
 
   
