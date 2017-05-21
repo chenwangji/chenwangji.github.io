@@ -1,0 +1,1258 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="interview," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="背景五一前面试了一周，陆陆续续面试了十多家公司，最终拿到5个offer,对于这个结果还算满意。五一后顺利入职，到现在也有三周了，一直没时间来更新一下博客，这周顺利完成需求，也就有了时间，然后来更新下这个快长草的地方。
+面试的十多家公司里，有大厂，也有小作坊；有自营，也有外包；有被虐的，也有找回自信的。这段经历很有趣，收获也颇多。
+下面挑几家来说说。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面试记">
+<meta property="og:url" content="http://yoursite.com/2017/05/21/interview/index.html">
+<meta property="og:site_name" content="chenwangji's blog">
+<meta property="og:description" content="背景五一前面试了一周，陆陆续续面试了十多家公司，最终拿到5个offer,对于这个结果还算满意。五一后顺利入职，到现在也有三周了，一直没时间来更新一下博客，这周顺利完成需求，也就有了时间，然后来更新下这个快长草的地方。
+面试的十多家公司里，有大厂，也有小作坊；有自营，也有外包；有被虐的，也有找回自信的。这段经历很有趣，收获也颇多。
+下面挑几家来说说。">
+<meta property="og:updated_time" content="2017-05-21T08:37:36.421Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="面试记">
+<meta name="twitter:description" content="背景五一前面试了一周，陆陆续续面试了十多家公司，最终拿到5个offer,对于这个结果还算满意。五一后顺利入职，到现在也有三周了，一直没时间来更新一下博客，这周顺利完成需求，也就有了时间，然后来更新下这个快长草的地方。
+面试的十多家公司里，有大厂，也有小作坊；有自营，也有外包；有被虐的，也有找回自信的。这段经历很有趣，收获也颇多。
+下面挑几家来说说。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"right","display":"post","offset":0,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/05/21/interview/"/>
+
+
+
+
+
+  <title> 面试记 | chenwangji's blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">chenwangji's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">This is the worst time, and this is the best time.</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/21/interview/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="chenwangji">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="chenwangji's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                面试记
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-21T00:00:00+08:00">
+                2017-05-21
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-05-21T16:37:36+08:00">
+                2017-05-21
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/interview/" itemprop="url" rel="index">
+                    <span itemprop="name">interview</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/05/21/interview/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/05/21/interview/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                  
+                    <span class="post-meta-item-text">字数统计</span>
+                  
+                    <span title="字数统计" }}">
+                      
+                    </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h4><p>五一前面试了一周，陆陆续续面试了十多家公司，最终拿到5个offer,对于这个结果还算满意。五一后顺利入职，到现在也有三周了，一直没时间来更新一下博客，这周顺利完成需求，也就有了时间，然后来更新下这个快长草的地方。</p>
+<p>面试的十多家公司里，有大厂，也有小作坊；有自营，也有外包；有被虐的，也有找回自信的。这段经历很有趣，收获也颇多。</p>
+<p>下面挑几家来说说。</p>
+<a id="more"></a>
+<h4 id="周一"><a href="#周一" class="headerlink" title="周一"></a>周一</h4><h6 id="chapter-1"><a href="#chapter-1" class="headerlink" title="chapter 1"></a>chapter 1</h6><p>周一一早就海投了简历，然后陆陆续续收到了面试邀请。</p>
+<p>去的第一家面试的公司是一家做数据可视化的外包，我并不是很擅长，公司在福田，蛮远的，不过这时投简历之后的第一家打电话邀请面试的，抱着试试的心态下午就匆忙赶过去。</p>
+<p>HR简单的问了一下个人背景，然后就是技术面。主要问题：</p>
+<ol>
+<li>使用过的框架</li>
+<li>介绍下之前的最满意的项目</li>
+<li>介绍下你认为你在你的项目中自我感觉最精妙最得意的一些东西，主要能体现你的编码水平。</li>
+<li>一个算法题(具体忘记了。。。)</li>
+</ol>
+<p>对于这几个问题，我回答得都不是很好，可能是因为太长时间没面试的原因，没有进入状态。特别是后面两个，尽管自己也有过蛮复杂的实现，但是一下子大脑一片空白，最后的算法我也没做出来，回到家想想感觉也是非常地简单。</p>
+<p>之后部门经理跟我说了很多公司的情况，也问了我一些比较开放性的问题，但都是不痛不痒。</p>
+<h6 id="chapter-2"><a href="#chapter-2" class="headerlink" title="chapter 2"></a>chapter 2</h6><p>第一家结束之后匆匆赶到科技园，这回面试的是一家做鞋子数据分析的公司，具体就不是很清楚了。需要会用vue的，自己也懂一点vue的皮毛，然后就顺便过去了。</p>
+<p>当时技术和HR正在聊天，我到了之后，直接就让我面试，显得很不正式，技术在面试的时候，HR还在一边不停地让技术问深点，让我感觉很不自在。<br>当时技术问的问题都很刁钻，主要问题：</p>
+<ol>
+<li>http通信</li>
+<li>vue父子组件传值，vuex的具体用法</li>
+<li>一个弹出层的水平垂直居中</li>
+</ol>
+<p>实际上问题并不像看起来这么简单。比如vuex,他会问到比较高级的应用，然而我只知道vuex的很简单的应用….</p>
+<p>技术上我只要回答了一点点，他就要往更深的地方挖掘，到最后我能回答上的没几个，就感觉被虐得挺惨的。而且技术看起来年纪还没我大，更加有点伤了我的自尊心了。</p>
+<p>最后，我连手机充电器都落他们公司了（哭）。</p>
+<h6 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h6><p>晚上回到家就感觉很累，很想直接躺下就睡，但是想到第二天还有很多个面试，就强行让自己打起精神来做准备。</p>
+<h4 id="周二"><a href="#周二" class="headerlink" title="周二"></a>周二</h4><h6 id="chapter-1-1"><a href="#chapter-1-1" class="headerlink" title="chapter 1"></a>chapter 1</h6><p>周二选了一家在兴东的公司开始面试。公司是做酒水的电商公司，很大，环境也很高大上，是我喜欢的类型。</p>
+<p>到了之后前台直接给我一套笔试题，然后就开始答题。可能很多人喜欢网上找答案，或者求助别人，但是我觉得没这必要，一是觉得找起来也蛮慢的，二来是如果面试官问你思路，那不就露馅了？所以对于笔试题，我向来都是独立完成的。</p>
+<p>这家公司的笔试题还是很有水平的，然后我答得还算可以：</p>
+<p>1.js的数据类型</p>
+<p>烂大街的题，但是我脑残写了es6的symbol，但是我对symbol一点都熟悉，然后面试官也问了，当时满脸尴尬。</p>
+<p>2.第二题主要考察变量提升和作用域</p>
+<pre><code>function a() {
+    return 1;
+}
+console.log(&apos;1&apos;, a);
+
+(function() {
+    console.log(this);
+    console.log(this.a);
+    if (true) {
+        console.log(&apos;3&apos;, a);
+        function a() {
+            return 2
+        }
+    }
+
+})();
+
+// 1  function a() { return 1}
+// window
+// function a { return 1}
+// 3 function a { return 2}
+</code></pre><p>当时跟面试官解释这道题时，面试官跟我说if有块作用域，我当时就想笑…</p>
+<p>3.第三题倒估计时要考闭包，但是我钻了个空子，用es6的<code>let</code>来解答</p>
+<p>利用原生js输出li的index值</p>
+<p>4.用promise实现：<br>红灯三秒亮一次，绿灯一秒亮一次，黄灯2秒亮一次，如何让三个灯不断交替重复亮灯？三个灯函数已经存在：</p>
+<pre><code>function red() {
+    console.log(&apos;red&apos;);
+}
+function green() {
+    console.log(&apos;green&apos;);
+}
+function yellow() {
+    console.log(&apos;yellow&apos;);
+}
+</code></pre><p>还好我还是会用promise的：</p>
+<pre><code>function red() {
+    console.log(&apos;red&apos;);
+}
+function green() {
+    console.log(&apos;green&apos;);
+}
+function yellow() {
+    console.log(&apos;yellow&apos;);
+}
+
+
+function creatPro(resolve, reject, time) {
+    var pro = new Promise(function(resolve, reject) {
+        setTimeout(resolve, time);
+    }) 
+    return pro;
+}
+setInterval(function() {
+    creatPro(red, null, 3000)
+    .then(function() {creatPro(green, null, 1000)})
+    .then(function() {creatPro(yellow, null, 2000)})
+}, 6000)
+</code></pre><p>5.实现bind的polyfill。</p>
+<p>这个问题之前有看过，但是要自己实现，我压根不知如何下手，大概是利用call/aplly。<br>具体实现可参考MDN上<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind" target="_blank" rel="external">bind的polyfill</a>。</p>
+<p>笔试之后，面试官就来问我一些面试题，他就是随便在网上搜索的一些很常见的基础面试题，很多，但是我也是早有准备，所以回答还算可以。问题主要有这些：</p>
+<ol>
+<li>css居中</li>
+<li>移动端兼容</li>
+<li>ionic遇到的问题</li>
+<li>浏览器请求开始到完成全过程，http状态码及信息，get，post，跨域</li>
+<li>闭包</li>
+<li>vue,AngularJs双向数据绑定各自实现的原理及差别（这个当时是懵逼的）</li>
+<li>Cordova插件问题</li>
+<li>XMLHttpRequest和XMLhttpRequest2的区别（XMLhttpRequest2是什么鬼，没听过…）</li>
+</ol>
+<p>后面的三个答得不是很好，其他都还ok，反正当时是自我感觉良好的。</p>
+<p>总体感觉这家公司的技术栈比较传统，用jQuery做页面，然后ionic来开发自用的app。</p>
+<p>之后是HR面，问得很常规，自己的回答也很不错，基本薪资福利，个人状况都聊得比较细，能感觉到似乎挺希望我过去的。然而到最后还是让我周四再过去复试一次。。。当时就感觉有点失望，竟然还得考虑。然后我只好奔赴下一个面试。</p>
+<p>之后周四参加了复试，提前赶过去，然而却让我等了估计有快一个小时。面试的是技术总监，拿着我的简历和笔试题，问了我三个问题：</p>
+<ol>
+<li>介绍下你的项目</li>
+<li>图片预览你怎么做</li>
+<li>项目结构如何制定</li>
+</ol>
+<p>后面的两个问题我不太会答，所以表现得不太好，当时感觉就炸了。我还是挺希望到这家公司的，最后走的时候还跟面试官说希望无论能否拿到offer都给我个答复，不过到现在也没收到过。</p>
+<h6 id="chapter-2-1"><a href="#chapter-2-1" class="headerlink" title="chapter 2"></a>chapter 2</h6><p>下午匆忙赶到科技园，奔赴下场面试。这家公司是做P2P金融的，环境很高大上，公司就在储能大厦46，47楼。<br>过来之后没有做笔试题，也没有填什么资料表格。面试官拿着我的简历直接开问：</p>
+<ol>
+<li>服务端和客户端渲染的区别及各自优缺点</li>
+<li>分页刷新，如何保存当前分页，不用本地缓存和上传到服务器</li>
+<li>node来如何写接口</li>
+<li>之前项目中支付功能的实现。再web APP 需要调用支付宝，微信支付，而在微信端智能调用微信支付，这个问题怎么解决</li>
+<li>gulp和webpack的区别</li>
+<li>git的用法，冲突如何解决</li>
+</ol>
+<p>老实说这些问题我只能扯点皮毛，根本上的其实对这些问题包含的知识点并不是很清楚，所以感觉回答得很不好，又像被虐了。但是能感觉技术官问的问题和之前面试的问题差别很大。<br>比如分页，我想到的是通过本地存储和保存到后端，技术官跟我说，其实可以将信息保存到url里,即路由中，用户刷新页面,url并不会变，所以会一直留在当前页面。</p>
+<p>尽管不太抱有希望，但是技术官还是跟我谈了他们公司的当前产品，技术的情况，也跟我聊了薪资。</p>
+<p>之后是HR面。这家公司的HR尽管很和善，但是问得问题都很专业，也就是在各种设套，考察我的个人忠诚度，进取心，稳定度等。不过呢，我也是早有准备，HR面算是做得比较好的。</p>
+<p>之后面试就结束了，综合来看，我对自己不抱太大希望，不过我也挺喜欢这家公司的，环境，技术栈，个人发展都不错。</p>
+<p>然而，最后我幸运地拿到了这家公司的offer，并且已经在这上班了三周….小确幸。</p>
+<p>通过在这上班的三周，我自我感觉我确实离他们公司的要求还有一定距离，但是估计是目前的老大觉得有提升的空间，并且公司空缺的岗位急需人来补，所以我才有了这个机会吧。</p>
+<h6 id="chapter-3"><a href="#chapter-3" class="headerlink" title="chapter 3"></a>chapter 3</h6><p>在储能面试结束后，大概是4：30，感觉还有时间，然后就赶赴也在深大附近的一家做家居的公司。<br>这届公司环境一般，规模不大不小，看了他们的产品，做得也不太好，当时我对他们家的印象并不是很好。但是由于急着找到工作，所以也顺便来面试了。</p>
+<p>进去之后填了信息登记表，然后做了一套笔试题，题目比较常规：</p>
+<ol>
+<li>清除浮动的方式有哪几种</li>
+<li>JavaScript中使用typeof返回的类型有哪些</li>
+<li>js的继承方式有那些</li>
+<li>typeof,instanceof,Object.prototype.toString()这几种方式的作用和区别</li>
+<li>js如何实现后台语言中的privite,public,protected,static变量</li>
+<li>如何解决移动端的tap事件点击穿透的问题</li>
+<li>zepto.js中tap,swipeLeft是如何实现的（写出思路即可）</li>
+<li>js事件委托的原理，常用于什么场景下</li>
+<li>简要说一下js是如何实现面向对象的</li>
+</ol>
+<p>这几个题答完，面试官就对着这几个问题来问我。然后我的回答还算比较好，因为他问的也蛮简单的…大概不到十分钟，在他的眼里就能感觉得出他对我的肯定，也不知道是不是错觉，就是那么自信。</p>
+<p>之后HR也是简单地询问了我当前的情况，也聊了薪资，当时估计也有6点多了，最后说等老板回来了需要再复试一下。</p>
+<p>我其实也不是很想到这家公司，但是因为手头没有offer，也就先应了下来。</p>
+<p>最后HR约了周五下午复试，其实那个时候我已经拿到3个offer，想着先把这个offer也拿下，到五一假期再好好考虑。<br>到了之后，HR似乎通知了上回的技术来面试我，然后技术看到我的简历及笔试答案，瞅了我一下，就说不用面了，哈哈。</p>
+<p>然后就安排我到老板的办公室。到了之后，老板打开我之前做过的项目，随便点评了一下，然后问我这个设计是不是我做的，当他问完我这个问题我就知道这位老板基本在技术上是零的状态。这就给了我吹牛逼的机会。不过他后来叫了一个后端过来，说要跟我对了一下。然后我问了他一下他们网站的制作，以及如何做优化。然后发现他们几乎没做什么优化，然后我就说了一下换做是我的话会做那些优化，毕竟后端在一些偏前端的地方了解得还是比较少。</p>
+<p>一顿分析之后，似乎老板也表示可对我能力得肯定。之后HR跟我核实了一些情况之后，说会在待会给一个回复，让后先回去。</p>
+<p>之后5点左右果然就收到了这家公司的offer。</p>
+<h6 id="小结-1"><a href="#小结-1" class="headerlink" title="小结"></a>小结</h6><p>回到家，总结了当天的三个面试，发现自己的表现相对于第一天好了很多，并且对第一和第三面试都很有信心。最终也拿到了2个offer。</p>
+<h4 id="周三"><a href="#周三" class="headerlink" title="周三"></a>周三</h4><p>由于前一天的良好表现，一大早出门就感觉很自信。</p>
+<h6 id="chapter-1-2"><a href="#chapter-1-2" class="headerlink" title="chapter 1"></a>chapter 1</h6><p>第一家是一个做服装电商的，对于做电商，我还是挺喜欢的，这方面的项目也得也比较多了。<br>查了下这家公司的网上的情况，感觉还挺高大上的，并且是在兴东，还算比较近。所以第一家就去了那里。</p>
+<p>不过到了那边才发现，这是一个坑。费了老半天才找到这家公司，进去之后观察了一下，大概加起来不到10个人，这包括了所有的人，而不是仅仅是技术团队。当时我就被镇住了，这就是真正的小作坊啊！</p>
+<p>到了之后就直接面试，面试的地方就在他们的办公室，他们也就一个办公室，并没有任何会客的地方。随便一张桌子，两个凳子，就是用来会客的。</p>
+<p>当时我是想溜的，但是来都来了，也可以听听技术会问些什么，看看这家小作坊会有什么不同的地方。</p>
+<p>技术也是一脸睡眼惺忪的样子。更加拉低了我对这家公司的印象。</p>
+<p>技术上来就让我写一个10！的递归。递归很久没用了，不过我还是能写出来。</p>
+<p>然后他就拿着我的项目，要我展示一下。</p>
+<p>之后就问我薪资。<br>然后就跟我说老板不在，需要复试才能得到结果，让我先回去，我也是应了下来。</p>
+<p>整个过程不到10分钟吧，我也不知道我哪做得不对，但就感觉自己被虐了。估计对于这家小作坊，是我薪资要多了？</p>
+<p>之后HR还约了我第二天复试，我内心其实是拒绝的，但是想着先答应，后面考虑好再决定要不要去，没成想过了一个多小时就跟我说已经找到更合适的，通知我不用复试了，而且还是短信来通知，一个正式点的邮件都不会发吗？</p>
+<p>这个时候大概早上10点，感觉早上还能再面试一家，然后就带着不太爽的心情奔赴科技园。</p>
+<h6 id="chapter-2-2"><a href="#chapter-2-2" class="headerlink" title="chapter 2"></a>chapter 2</h6><p>这家公司是做办公软件和广告投放的，他们家的环境比较窄，人倒是不少，但是都在一个比较狭窄的地方，看完我内心也有点抗拒了。</p>
+<p>HR直接给了一套笔试题，题目不少，而且一个题目还不止一个问题。好在问题都比较基础简单，都是HTML,css,js基础，没有涉及框架的问题。</p>
+<p>这里就不罗列笔试题了，都是网上能直接搜索到的问题。答完感觉就像高中写政治试卷，写完手都要断了。</p>
+<p>之后技术进来开始面试，技术看起来很年轻，并且问的问题比较有水分，不知道是他的水平如此，还是他们的岗位要求就只是如此，感觉我的回答有时候他都听得一愣一愣的，面试的问题问得不少，挑几个：</p>
+<ol>
+<li>jq源码，如何封装插件,$.extends()和$.fn.extends()的区别</li>
+<li>水平垂直居中的方法</li>
+<li>css动画，如何实现loading的动画</li>
+<li>如何开发混合APP</li>
+</ol>
+<p>面试的表现还可以，然后就是老板面，而不是HR面…（他们的HR感觉有点蠢萌，不像其他HR那样精于算计，估计就是前台兼职的）。</p>
+<p>老板并不是技术出身，问的问题比较类似于HR问的问题，只要让自己表现起来很有稳定性，并且热爱钻研技术，基本都能让对方满意。</p>
+<p>最后也聊了他们公司的具体业务和薪资。</p>
+<p>有一个细节让我感觉挺有趣的，老板为我薪水的时候在区分试用和正式的时候涂改了几次，让我差点笑了。其实试用期的工资我是不会太在乎差多少的。</p>
+<p>最后，果不其然，这家公司的offer也顺利拿下。</p>
+<h6 id="chapter-3-1"><a href="#chapter-3-1" class="headerlink" title="chapter 3"></a>chapter 3</h6><p>下午赶到科兴的一家做医疗的公司，参加面试。到了公司之后，发现这儿的环境真的很好。并且有三个点给我留下了比较深的印象：</p>
+<ol>
+<li>做笔试题的时候是在他们的休息区，可以感受到他们真实的工作氛围，这个氛围是我比较喜欢的。</li>
+<li>公司前台妹子名字叫董明珠。</li>
+<li>公司HR长得和桂纶镁一模一样。</li>
+</ol>
+<p>然后就开始做笔试题，这笔试题的量多得吓人，而且题目不仅仅是一个问题，问题也不算简单，还涉及到了Node.js,所以我光做笔试题就用了1个小时左右。</p>
+<p>随便抽几题：</p>
+<ol>
+<li>css选择符有哪些？哪些属性可以继承？优先级算法如何计算？css3新增的伪类有哪些？</li>
+<li>HTML5/CSS3有哪些新特性，移除了哪些元素？如何处理HTML5新标签的兼容性问题？如何区分HTML和HTML5?</li>
+<li>JavaScript类型，原型链？有什么特点？</li>
+<li>iframe有哪些缺点？</li>
+<li>Node.js的适用场景</li>
+<li>web应用从服务端主动推送data到客户端有哪些方式</li>
+</ol>
+<p>这些问题要认真回答起来，我估计写到天黑也写不完，所有我基本都挑了我所知道的重点简练地回答。</p>
+<p>写完之后又是手要废的节奏。</p>
+<p>之后是技术面。面试官不知道是不是前端团队的leader(or 小兵？)，总之他连我的简历都没有拿出来，就只是看着我的笔试回答，并且在脑子里随便想了一些在网上烂大街的题目来问我，对于这种问题，我基本是没遇到什么阻力。</p>
+<p>之后是HR面，HR的问题呢，也比较简单，并且言谈举止让人觉得很舒服。</p>
+<p>问了我一些情况之后，告诉我，现在技术总监开会去了，不在这边，让我明天下午再来复试。然后我就奔赴下一场面试。</p>
+<p>毕竟我还是挺喜欢到这边来的，所以也很期待复试。</p>
+<p>复试安排在周四的下午。由于是技术总监面，所以当时还是有点小紧张的。但是在同他的交流中我发现，这个技术总监至少在前端方面并没有多少深入的研究，仅仅是知道当前前端开发的一些风向。</p>
+<p>他主要问了我这几个问题：</p>
+<ol>
+<li>对目前前端圈的技术风向的看法</li>
+<li>平时怎么提升自己的水平</li>
+<li>自己未来的规划</li>
+<li>前后端合作问题</li>
+</ol>
+<p>对于前后端合作，我跟他说我们之前的后端语言都是PHP，换成java应该变化不大。不过他还是招呼了一个java开发过来，让他和我对对。</p>
+<p>java开发过来，然后就互相说了下各自前后端如何合作，然后他还给我出了一个小难题：</p>
+<p>手机端开发，顶部三个tab切换，如何保证用户的良好体验？</p>
+<p>我思考了下，想到这样一个方案:</p>
+<p>如果初次请求的数据量不是很大，可以一次性把首页数据加载进来，数据量答可以用懒加载，然后各个tab用css来控制显示/隐藏，再设置一个下拉刷新来让用户主动请求数据，而不是每次切换都要刷新一遍数据，这样就能大大地优化用户体验，并且也减少了请求次数，减轻了对服务端地压力。</p>
+<p>之后，似乎技术总监和java开发对我的方案还算肯定，这一关就算过了。</p>
+<p>技术总监让我对自己的水平定一个级，由于心虚，并不敢自己评定为高级，就跟他说应该算中级吧。</p>
+<p>之后他就让我先回去，稍后HR会跟我联系，敲定薪资。</p>
+<p>然后第二天HR联系了我，最终给我的薪酬比我提出来的少了1k,但是我蛮喜欢他们公司的，感觉也能接受。</p>
+<p>但是这之后又出了点小插曲，导致最终我没有选择，只能放弃入职该公司：</p>
+<p>他们的技术总监希望之前的前端在项目结束之后在离职，到时我再入职。可是我入职和他离职有冲突吗？难道就为了省那点钱？因为这个，所以我选择了其他公司。</p>
+<h6 id="chapter-4"><a href="#chapter-4" class="headerlink" title="chapter 4"></a>chapter 4</h6><p>在科兴面试结束后，我又赶到比克大厦，参加当天的最后一场面试。这家公司具体做什么的我并不是很清楚，似乎是游戏相关，并且产品是跟国外有联系，可能会被安排到国外去。</p>
+<p>进去就开始做笔试题。这笔试题我第一眼看到有点懵逼，基本都是前端工程化和框架的一些问题，和之前做过的笔试题注重考察基础很不一样。</p>
+<p>问题主要有这几个：</p>
+<ol>
+<li><p>简单描述下命令行参数<code>inline</code>,<code>hot</code>的区别。 </p>
+<p> webpack –inline –hot</p>
+</li>
+<li>请写出几个与动画效果相关的css3样式规则。</li>
+<li>less/sass中的<code>@extend</code>与css modules的<code>componse</code>的优劣</li>
+<li>React中如果直接赋值<code>this.state.total = 42</code>,其中的42会被render出来吗，为什么</li>
+<li>React中<code>shouldComponentUpdate</code>方法的判断条件该如何写</li>
+<li>简述React中的<code>Stateless Functional Component</code>与<code>PureComponent</code>的区别</li>
+<li>Vue中实现父子组件通讯的方式有哪些</li>
+<li>在你的Vue项目中最常用哪几个生命周期</li>
+<li>有哪些你觉得能借助学习以提升水平的网站</li>
+</ol>
+<p>硬着头皮答了这些问题，然后就是技术面。</p>
+<p>比较意外的是，技术面竟然有两个面试官，而且还是一男一女。男的负责pc端，主要用React开发，女的负责移动端，主要用Vue开发。并且女面试官看起来很有气质，一看就像技术大牛，在代码界的女技术大牛是稀有物种啊，顿时就肃然起敬。</p>
+<p>回到面试。开始主要是针对笔试题，然后还另外问题这几个问题：</p>
+<ol>
+<li>你觉得React,Vue,AngularJs在项目中的区别，为什么你会觉的Vue用起来比AngularJS爽？</li>
+<li>AngularJS和Angular 2 有哪些区别？</li>
+<li>你虽知道的ES6/ES7,ES7 @component, ES9 import()</li>
+<li>flex弹性盒子，flex: 1 0 70px; 这个样式规则的意义</li>
+</ol>
+<p>可以从面试官的话语中感受到，他们团队对前端前沿技术应用到项目中是不遗余力的，这样的做法让我很佩服。</p>
+<p>然而，当我问到他们家的加班情况如何，他们就跟我说，最近一段时间可能是996,不过等到6月份就好了。</p>
+<p>然后我心里就有点发怵了，不过呢，还是那句话，先拿到offer再说。不过由于笔试面试表现都不是很好，所以也没有抱太大希望。</p>
+<p>并没有HR面，薪资也是技术跟我谈的。</p>
+<p>不过呢，这竟然是我拿到的第一个offer,第二天一大早，人事就联系我，然后给我发了offer。</p>
+<h6 id="小结-2"><a href="#小结-2" class="headerlink" title="小结"></a>小结</h6><p>这一天面试了四家，表现有好有差，不过对于当天的变现还算满意。最终也在这一天的4家公司里拿到了3个offer，这个还是比较意外的。</p>
+<h4 id="周四"><a href="#周四" class="headerlink" title="周四"></a>周四</h4><p>周四只去了两家面试，其他的都是复试。</p>
+<h6 id="chapter-1-3"><a href="#chapter-1-3" class="headerlink" title="chapter 1"></a>chapter 1</h6><p>面试的第一家还是在兴东，做桌游和手游的，算是业内比较大的公司了，要求自然也会高。但是因为当时手头已经有offer，所以放得比较开，反而显得比较轻松。</p>
+<p>到了之后让我做了一套笔试题，笔试题都还算简单，开始是几道不定项选择题，然后是几道编程题：</p>
+<ol>
+<li>至少用两种方法实现不借用第三个变量的情况下，对调两个变量的值。</li>
+<li>有尺寸100px * 100px的正方形，用css3实现向右匀速运动500px,并且将其逐渐放大至两倍大小的动画效果，动画速度0.3s</li>
+<li>请用JS实现数组[1, 3, 3, 3, 1, 5, 6, 7, 8, 1]的去重算法</li>
+</ol>
+<p>最后估计面试官也没看我的笔试题。</p>
+<p>然后我就在那里等着技术面。</p>
+<p>大概等了有1个小时（没错，就是等了那么久），面试官终于出来了，当时我已经有点不爽了。</p>
+<p>然后他就拿着我的简历看了一下。问了我挺多关于原生js和jq的问题，包括如何实现拖拽，如何使用jq的选择器，问题由浅入深，开始还能招架，到后面就有点听不懂他要干什么了。而且这个面试官也有个习惯，希望我把我的思路用代码写出来，有点吹毛求疵的感觉。</p>
+<p>反正整个面试，估计他不爽，我也不是很舒服。大概面了20分钟，他就让我提问题，意思是面试要结束了，我也知道他的意思，并没有问他问题，然后就不欢而散了。</p>
+<p>尽管这家公司环境和影响力都很大，但是因为这个面试官的一些行为表现，让我并不是很想待在这里。</p>
+<h6 id="chapter-2-3"><a href="#chapter-2-3" class="headerlink" title="chapter 2"></a>chapter 2</h6><p>下午参加完科兴的复试，之后决定到一加试试。</p>
+<p>一加是我的最后一个面试，并且也给我留下了极深的印象。而且还让我产生了我可以拿到offer的错觉。</p>
+<p>约了下午4：30，最后还迟到了10分钟。到了之后感觉环境真的很好，有很多外国人。因为一加的手机不少是销往国外的，所以外国人多也很正常。</p>
+<p>等了一会儿，然后面试官就拿着笔试题，面试官拖着个两下，穿着很简单，并且还有点胡子拉碴，很有个性的一个技术leader。</p>
+<p>答笔试题的时候并不是我一个人在那答完，而是面试官在旁边坐着，我在旁边答，第一次碰到这样的一个形式。</p>
+<p>笔试题前面选择题，而且还是不定项的，后面后一道编程题。笔试题都很奇怪，应该是自己出的，着重考察基础，包括HTML.CSS,JS,只要思路清晰，这些选择题还是不是很难的。</p>
+<p>最后一道题大概是他写了个递归求和的方法，然后让我来改写，以提高运算性能。</p>
+<p>当时我的思路是：递归是最耗费性能的一种循环方法，完全可以改为用性能最高的for循环来解，然后我就那样改，最后面试官也说了确实就是那样做的。</p>
+<p>笔试题昨晚，他就拿着卷子来提问我解体的思路，并且在这些题目中发散出很多问题来考察我。</p>
+<p>比如有个题是选择哪些是通过HTTP请求的包，然后我说完我的选择思路，他就会问我HTTP的相关知识。</p>
+<p>总之，考查得很全面，而且整个面试过程非常轻松，属于真正意义上的交流技术，这更加加深了我对这家公司的喜欢。</p>
+<p>大概和技术leader聊了2个小时，然后我问他，我有可能加入吗。当时他对我的评价是这样的：</p>
+<p>基础还是比较好的，可能项目经验差点，进来来时有很大的可能的。</p>
+<p>我当时听到内心是很激动的。</p>
+<p>之后是HR面。HR看起来年纪似乎比我还小，像邻家小妹的感觉，所以聊起来没有多大压力。因为我本身就喜欢研究手机，智能硬件等比较新潮的东西，自然也能扯上一些。</p>
+<p>HR面之后，由于技术总监不在，所以安排架构师过来面我。</p>
+<p>第一次见到架构师，内心既激动又紧张。</p>
+<p>然后他问的问题多数是工作的中一些项目的组织结构，各部门如何配合，说实话，他问得很深，已经超出我的水平了，所以答得并不是很好。</p>
+<p>本来感觉已经妥妥能拿到offer的，架构师面完之后，感觉又不稳了。</p>
+<p>架构师面之后，面试就结束了。尽管很希望拿到offer，不过到最后也没有通知，应该是挂了。</p>
+<p>不过也不虚此行，这次面试学到的东西着实不少。</p>
+<h6 id="小结-3"><a href="#小结-3" class="headerlink" title="小结"></a>小结</h6><p>周四的面试的都是大厂，最终也都没有拿到offer,可能是自己的水平还不足以胜任他们的岗位需求，所以还是得提高自己。</p>
+<h4 id="周五"><a href="#周五" class="headerlink" title="周五"></a>周五</h4><p>周五没有参加任何面试，仅仅参加了一个复试。</p>
+<h4 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h4><p>这十来个面试让我不仅收获了5个offer,而且也收获了不少前端领域的知识，同时也通过面试找到自己的不足之处，在以后的工作学习中针对性地填坑。</p>
+<p>感谢在面试过程中乐于分享，给我贡献一些建议的面试官。</p>
+<p>写这一篇长文目的只是记录自己面试的一些经历，方便自己以后不时翻出来。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/interview/" rel="tag"># interview</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/01/react_data-manage/" rel="next" title="用React和Ant Design 搭建一个简单的后台管理系统">
+                <i class="fa fa-chevron-left"></i> 用React和Ant Design 搭建一个简单的后台管理系统
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/05/21/interview/"
+           data-title="面试记" data-url="http://yoursite.com/2017/05/21/interview/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="chenwangji" />
+          <p class="site-author-name" itemprop="name">chenwangji</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+           
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/chenwangji" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/chen-you-cheng-60/activities" target="_blank" title="zhihu">
+                  
+                    <i class="fa fa-fw fa-zhihu"></i>
+                  
+                  zhihu
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/2730539220" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#周一"><span class="nav-number">2.</span> <span class="nav-text">周一</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#chapter-1"><span class="nav-number">2.0.1.</span> <span class="nav-text">chapter 1</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#chapter-2"><span class="nav-number">2.0.2.</span> <span class="nav-text">chapter 2</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#小结"><span class="nav-number">2.0.3.</span> <span class="nav-text">小结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#周二"><span class="nav-number">3.</span> <span class="nav-text">周二</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#chapter-1-1"><span class="nav-number">3.0.1.</span> <span class="nav-text">chapter 1</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#chapter-2-1"><span class="nav-number">3.0.2.</span> <span class="nav-text">chapter 2</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#chapter-3"><span class="nav-number">3.0.3.</span> <span class="nav-text">chapter 3</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#小结-1"><span class="nav-number">3.0.4.</span> <span class="nav-text">小结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#周三"><span class="nav-number">4.</span> <span class="nav-text">周三</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#chapter-1-2"><span class="nav-number">4.0.1.</span> <span class="nav-text">chapter 1</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#chapter-2-2"><span class="nav-number">4.0.2.</span> <span class="nav-text">chapter 2</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#chapter-3-1"><span class="nav-number">4.0.3.</span> <span class="nav-text">chapter 3</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#chapter-4"><span class="nav-number">4.0.4.</span> <span class="nav-text">chapter 4</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#小结-2"><span class="nav-number">4.0.5.</span> <span class="nav-text">小结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#周四"><span class="nav-number">5.</span> <span class="nav-text">周四</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#chapter-1-3"><span class="nav-number">5.0.1.</span> <span class="nav-text">chapter 1</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#chapter-2-3"><span class="nav-number">5.0.2.</span> <span class="nav-text">chapter 2</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#小结-3"><span class="nav-number">5.0.3.</span> <span class="nav-text">小结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#周五"><span class="nav-number">6.</span> <span class="nav-text">周五</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#结语"><span class="nav-number">7.</span> <span class="nav-text">结语</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">chenwangji</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"chenwangji"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.0"></script>
+
+
+
+  
+
+</body>
+</html>
