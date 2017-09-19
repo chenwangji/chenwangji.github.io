@@ -308,7 +308,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/18/自己动手实现文件上传组件/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/18/upload/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="chenwangji">
@@ -330,7 +330,7 @@
             
               
                 
-                <a class="post-title-link" href="/2017/09/18/自己动手实现文件上传组件/" itemprop="url">
+                <a class="post-title-link" href="/2017/09/18/upload/" itemprop="url">
                   自己动手实现文件上传组件
                 </a>
               
@@ -363,7 +363,7 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-09-19T00:14:55+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2017-09-19T21:06:53+08:00">
                 2017-09-19
               </time>
             
@@ -400,8 +400,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/09/18/自己动手实现文件上传组件/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/09/18/自己动手实现文件上传组件/" itemprop="commentCount"></span>
+                <a href="/2017/09/18/upload/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/09/18/upload/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -446,281 +446,16 @@
 
       
         
-          
-            <h4 id="文件上传"><a href="#文件上传" class="headerlink" title="文件上传"></a>文件上传</h4><p>根据正常配置，element ui 的<code>upLoad</code>组件无法使用。配置和一般人的用法一致。但是用原生form表单又可以使用。</p>
+          <h4 id="文件上传"><a href="#文件上传" class="headerlink" title="文件上传"></a>文件上传</h4><p>根据正常配置，element ui 的<code>upLoad</code>组件无法使用。配置和一般人的用法一致。但是用原生form表单又可以使用。</p>
 <p>目前初步估计是由于后端的配置问题。但是由于后端知识有限，暂不能知道是什么问题。</p>
 <p>目前的暂行办法是： 用原生form + iframe实现该功能，但是拖拽是暂时不能实现了。</p>
-<h4 id="具体实现"><a href="#具体实现" class="headerlink" title="具体实现"></a>具体实现</h4><h5 id="iframe模拟ajax"><a href="#iframe模拟ajax" class="headerlink" title="iframe模拟ajax"></a>iframe模拟ajax</h5><p> 文件上传的关键是input的类型设置为<code>file</code>,并且将from设置属性为<code>enctype=&quot;multipart/form -data&quot;</code>（具体作用未深入）。</p>
-<p>但是，这样实现的样式提交的时候会导致浏览器的默认刷新事件，解决办法是通过ajax模拟表单，或者通过iframe。在这里选择用iframe。</p>
-<p>若要form和iframe之间产生关联，需要在form标签上增加属性<code>target=&quot;nm_iframe&quot;</code>，并且在iframe上添加属性<code>name=&quot;nm_iframe&quot;</code>。</p>
-<pre><code>&lt;form class=&quot;cf&quot; enctype=&quot;multipart/form-data&quot; method=&quot;post&quot; :action=&quot;baseUrl + &apos;/check/uploadFile&apos;&quot; target=&quot;nm_iframe&quot;&gt;
-    &lt;input style=&quot;display: none&quot; type=&quot;file&quot; name=&quot;files&quot; id=&quot;fileInput&quot; @change=&quot;handlerUpload&quot; accept=&quot;application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet&quot;&gt; 
-    &lt;label for=&quot;fileInput&quot; class=&quot;el-button el-button--primary el-button--small&quot;&gt;选择文件&lt;/label&gt;
-&lt;/form&gt;
-
-&lt;iframe id=&quot;id_iframe&quot; name=&quot;nm_iframe&quot;&gt;&lt;/iframe&gt; 
-</code></pre><p>通过这样的设置，在请求返回成功之后，iframe会重新渲染，触发onload事件，会把返回值渲染到iframe中。</p>
-<p><img src="http://owgyg0cur.bkt.clouddn.com/upload_iframe_content.png" alt="image"></p>
-<p>根据这个钩子，我们可以做很多事情。</p>
-<pre><code>iframeUploadSuccessHandler() {
-    const uploadIframe = document.querySelector(&apos;#id_iframe&apos;);
-    uploadIframe.onload = () =&gt; {
-        let res = JSON.parse(uploadIframe.contentWindow.document.querySelector(&apos;body pre&apos;).innerHTML)
-        const head = res.head;
-        if (head.code == 100) {
-            this.$message.success(head.message);
-            this.allFileList = this.allFileList.concat(this.fileList);
-            this.clearWaitFileList()
-            return
-        }
-        this.$message.error(head.message);
-    }
-}
-</code></pre><h5 id="文件上传的控制"><a href="#文件上传的控制" class="headerlink" title="文件上传的控制"></a>文件上传的控制</h5><p>通过input[type=”file”]的<code>change</code>事件可以控制文件的增删。</p>
-<pre><code>setTimeout(() =&gt; { // 放在队列后面，等待页面加载完毕
-    this.fileInput = document.querySelector(&apos;#fileInput&apos;) 
-});
-
-handlerUpload(e) {
-    let fileArray = e.target.files;
-    this.fileList = Array.from(fileArray); // 将fileLIst转为数组
-    this.successUpload = false;
-},
-
-deleteFile() {
-    this.clearWaitFileList()
-},
-// 清空待上传文件列表
-clearWaitFileList() {
-    this.fileInput.value = &apos;&apos;; 
-    this.fileList = [];
-}
-</code></pre><p>最终代码：</p>
-<pre><code>&lt;template&gt;
-    &lt;el-dialog title=&quot;对账&quot; v-model=&quot;dialogCheck&quot; size=&quot;tiny&quot; :close-on-click-modal=&quot;false&quot; @close=&quot;closeDialog&quot; custom-class=&quot;dialog-w-400&quot;&gt;
-        &lt;div&gt;
-            &lt;p class=&quot;bold&quot;&gt;选择对账类型&lt;/p&gt;
-             &lt;el-checkbox-group v-model=&quot;dataType&quot;&gt;
-                &lt;el-checkbox v-for=&quot;(d, k) in dataTypeOpts&quot; :key=&quot;k&quot; :label=&quot;d.value&quot;&gt;{{d.label}}&lt;/el-checkbox&gt;
-            &lt;/el-checkbox-group&gt;
-        &lt;/div&gt;
-        &lt;div&gt;
-            &lt;p class=&quot;bold&quot;&gt;选择对账日期&lt;/p&gt;
-            &lt;el-date-picker
-            v-model=&quot;checkDateRange&quot;
-            type=&quot;daterange&quot;
-            :picker-options=&quot;finishDateOpts&quot;
-            placeholder=&quot;选择时间范围&quot;&gt;
-            &lt;/el-date-picker&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;cf&quot;&gt;
-            &lt;p class=&quot;bold&quot;&gt;增加数据对账 
-                &lt;i class=&quot;iconfont cursor font-20 mgr10 inline-block&quot; title=&quot;展开&quot; @click=&quot;showMore = true&quot; v-show=&quot;!showMore&quot;&gt;&amp;#xe62f;&lt;/i&gt;
-                &lt;i class=&quot;iconfont cursor font-20 mgr10 inline-block&quot; title=&quot;收起&quot; @click=&quot;showMore = false&quot; v-show=&quot;showMore&quot;&gt;&amp;#xe624;&lt;/i&gt;
-            &lt;/p&gt;
-            &lt;form class=&quot;cf&quot; enctype=&quot;multipart/form-data&quot; method=&quot;post&quot; :action=&quot;baseUrl + &apos;/check/uploadFile&apos;&quot; v-show=&quot;showMore&quot; target=&quot;nm_iframe&quot;&gt;
-                &lt;input style=&quot;display: none&quot; type=&quot;file&quot; name=&quot;files&quot; id=&quot;fileInput&quot; @change=&quot;handlerUpload&quot; accept=&quot;application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet&quot;&gt; 
-                &lt;label for=&quot;fileInput&quot; class=&quot;el-button el-button--primary el-button--small&quot;&gt;选择文件&lt;/label&gt;
-                &lt;input type=&quot;hidden&quot; name=&quot;checkId&quot; :value=&quot;UUID&quot;&gt;
-                &lt;input type=&quot;submit&quot; class=&quot;el-button el-button--success el-button--small mgl10&quot; :class=&quot;{&apos;not-allowed&apos;: !fileList.length}&quot; name=&quot;提交&quot; value=&quot;上传到服务器&quot; :disabled=&quot;!fileList.length&quot;&gt;
-                &lt;div class=&quot;color-gray font-12&quot;&gt;(只能上传excel文件，且不超过10M)&lt;/div&gt;
-                &lt;div class=&quot;font-12 mt10&quot; style=&quot;list-style: none&quot;&gt;
-                    &lt;li class=&quot;fong-12 cf&quot; v-for=&quot;(d, k) in allFileList&quot; :key=&quot;k&quot;&gt;
-                        &lt;i class=&quot;el-icon-document&quot;&gt;&lt;/i&gt;
-                        {{d.name}} 
-                        &lt;i class=&quot;el-icon-upload-success el-icon-circle-check color-success fr&quot; style=&quot;margin-top: 3px&quot; &gt;&lt;/i&gt;
-                    &lt;/li&gt;
-                    &lt;li class=&quot;fong-12 cf&quot; v-for=&quot;(d, k) in fileList&quot; :key=&quot;k&quot;&gt;
-                        &lt;i class=&quot;el-icon-document&quot;&gt;&lt;/i&gt;
-                        {{d.name}} 
-                        &lt;i class=&quot;iconfont cursor font-13 fr&quot; style=&quot;margin: 3px -5px 0 0&quot; @click=&quot;deleteFile(k)&quot;&gt;&amp;#xe65d;&lt;/i&gt;
-                    &lt;/li&gt;
-                &lt;/div&gt;
-            &lt;/form&gt;
-            &lt;iframe id=&quot;id_iframe&quot; name=&quot;nm_iframe&quot; style=&quot;display:none;&gt;&lt;/iframe&gt; 
-        &lt;/div&gt;
-
-        &lt;span slot=&quot;footer&quot; class=&quot;dialog-footer&quot;&gt;
-            &lt;el-button @click=&quot;closeDialog&quot;&gt;取 消&lt;/el-button&gt;
-            &lt;el-button type=&quot;primary&quot; @click=&quot;check&quot;&gt;开始对账&lt;/el-button&gt;
-        &lt;/span&gt;
-    &lt;/el-dialog&gt;
-&lt;/template&gt;
-
-&lt;script&gt;
-export default{
-    created() {
-        this.init();
-    },
-    mounted() {
-
-    },
-    props:{
-        dialogCheck: {
-            type: Boolean,
-            default: false
-        }
-    },
-    data() {
-        return {
-            dataType: [],
-            dataTypeOpts: [
-                {
-                    value: 1,
-                    label: &apos;放款&apos;
-                },
-                {
-                    value: 2,
-                    label: &apos;实收&apos;
-                }
-            ],
-            checkDateRange: null,
-            pickerOpts: {},
-            showMore: false,
-            fileList: [],
-            allFileList: [],
-            UUID: null,
-            successUpload: false,
-            fileInput: {},
-        }
-    },
-    computed: {
-    },
-    methods: {
-        init() {
-            this.finishDateOpts = {
-                disabledDate(time) {
-                    let thisTime = time.getTime();
-                    // 禁用今天及以后
-                    return (thisTime &gt; (new Date().setHours(0, 0, 0, 0)) - 1);
-                }
-            }
-        },
-        closeDialog() {
-            this.dataType = [];
-            this.checkDateRange = null;
-            this.showMore = false;
-            this.successUpload = false;
-            this.fileList = [];
-            this.allFileList = [];
-            this.$emit(&apos;close&apos;)
-        },
-        check() {
-            let dataType = this.dataType;
-            if(!dataType.length) {
-                this.$message.error(&apos;至少选择一个对账类型&apos;)
-                return
-            }
-            if (!this.checkDateRange || !this.checkDateRange[0] || !this.checkDateRange[1]) {
-                this.$message.error(&apos;请选择对账日期&apos;)
-                return
-            }
-            const config = {
-                checkTypes: this.dataType.join(&apos;,&apos;),
-                checkId: this.UUID,
-                startDate: this.checkDateRange[0].format(&apos;yyyy-MM-dd&apos;), 
-                endDate: this.checkDateRange[1].format(&apos;yyyy-MM-dd&apos;),
-            };
-            if (dataType.length === 1) {
-                config.dataType = this.dataType[0]
-            }
-            const loadingInstance = this.$loading({
-                fullscreen: true,
-                text: &apos;对账中&apos;
-            })
-            this.$http.post(&apos;/check/manualCheck&apos;, config).then(res =&gt; {
-                loadingInstance.close();
-                this.closeDialog();
-                let head = res.data.head || {};
-                if(head.code == &apos;100&apos;) {
-                    this.$message.success(head.message||&apos;对账完毕&apos;)
-                    this.$emit(&apos;update&apos;)
-                    return;
-                }
-                this.$message.error(head.message||&apos;对账失败&apos;)
-            })
-        },
-        iframeUploadSuccessHandler() {
-            const uploadIframe = document.querySelector(&apos;#id_iframe&apos;);
-            uploadIframe.onload = () =&gt; {
-                let res = JSON.parse(uploadIframe.contentWindow.document.querySelector(&apos;body pre&apos;).innerHTML)
-                const head = res.head;
-                if (head.code == 100) {
-                    this.$message.success(head.message);
-                    this.allFileList = this.allFileList.concat(this.fileList);
-                    this.clearWaitFileList()
-                    return
-                }
-                this.$message.error(head.message);
-            }
-        },
-        handlerUpload(e) {
-            let fileArray = e.target.files;
-            this.fileList = Array.from(fileArray); // 将fileLIst转为数组
-            this.successUpload = false;
-        },
-        deleteFile() {
-            this.clearWaitFileList()
-        },
-        // 清空待上传文件列表
-        clearWaitFileList() {
-            this.fileInput.value = &apos;&apos;; 
-            this.fileList = [];
-        }
-    },
-    watch: {
-        dialogCheck(value) {
-            if (value) {
-                this.UUID = Vue.com.generateUUID();
-                setTimeout(() =&gt; { // 放在队列后面，等待页面加载完毕
-                    this.fileInput = document.querySelector(&apos;#fileInput&apos;) 
-                });
-
-            }
-
-        },
-        showMore(value) {
-            if (value) {
-                this.iframeUploadSuccessHandler();
-            } else {
-                this.clearWaitFileList()
-            }
-        }
-    }
-}
-&lt;/script&gt;
-&lt;style lang=&quot;less&quot; scoped&gt;
-    #fileInput {
-        border: 0;
-        display: inline-block;
-        line-height: 1;
-        white-space: nowrap;
-        cursor: pointer;
-        background: #fff;
-        border: 1px solid #c4c4c4;
-        color: #1f2d3d;
-        margin: 0;
-        padding: 2px 15px;
-        border-radius: 4px;
-        -webkit-appearance: none;
-        -moz-user-select: none;
-        -webkit-user-select: none;
-        -ms-user-select: none;
-        outline: 0;
-        text-align: center;
-    }
-&lt;/style&gt;
-</code></pre><p>最终效果：</p>
-<p><img src="http://owgyg0cur.bkt.clouddn.com/upload_iframe_content_3.png" alt="image"></p>
-<h4 id="拖拽上传"><a href="#拖拽上传" class="headerlink" title="拖拽上传"></a>拖拽上传</h4><p><a href="https://developer.mozilla.org/zh-CN/docs/Using_files_from_web_applications" target="_blank" rel="external">MDN</a><br>有很好的教程。</p>
-<p>参考：</p>
-<ol>
-<li><a href="http://www.cnblogs.com/wangmeijian/p/3978407.html" target="_blank" rel="external">wangmeijian</a></li>
-<li><a href="https://github.com/cy0707/about_html/issues/33" target="_blank" rel="external">HTML5 DOM的File API</a></li>
-<li><a href="https://gxnotes.com/article/83380.html" target="_blank" rel="external">如何从FileList中删除文件</a></li>
-</ol>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/09/18/upload/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
